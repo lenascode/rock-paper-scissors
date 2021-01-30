@@ -53,15 +53,75 @@
             if (computerRound == playerRound) {
 
                 console.log("It's a tie!")
+                window.prompt("It's a tie!")
                 return;
             }  
-            else {
-                    console.log("Error");
-                    return;
-            }
-        }  
 
-        playRound();
+            else if (computerRound == r) {
+
+                if (playerRound == p) {
+
+                console.log("You win! Paper beats rock!")
+                    window.prompt("You win! Paper beats rock!")
+                    return;
+                }
+
+                if (playerRound == s)
+
+                console.log("You lose, human! Rock beats scissors!")
+                    window.prompt("You lose, human! Rock beats scissors!")
+                    return;
+                }
+            
+
+            else if (computerRound == p) {
+
+                if (playerRound == r) {
+
+                        console.log("You lose, Human! Paper beats rock!")
+                        window.prompt("You lose, Human! Paper beats rock!")
+                        return;
+                    }
+
+                        if (playerRound == s) {
+
+                        console.log("You win! Scissors beat paper")
+                        window.prompt("You win! Scissors beat paper")
+                        return;
+                    }
+            }
+            
+            else if (computerRound == s) {
+
+                if (playerRound == p) {
+                    
+                    console.log("You lose, Human! Scissors beats paper!")
+                    window.prompt("You lose, Human! Scissors beats paper!")
+                    return;
+
+                }
+
+                if (playerRound == r) {
+
+                    console.log("You win! Rock beats scissors")
+                    window.prompt("You win! Rock beats scissors")
+                    return;
+
+            }
+
+            else {
+                        console.log("Error");
+                        return;
+                }
+
+        }   
+        }
+        const playGame = playRound();  
+        
+        function game(playGame) {
+
+        
+        }
 
 
                                                                                                                                                                                                                                                                                                                                                                                                                        
