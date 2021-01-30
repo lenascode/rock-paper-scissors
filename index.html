@@ -6,40 +6,84 @@
         var r = "rock";
         var p = "paper";
         var s = "scissors";
-
-        function computerPlay() {
-
-            let computerSelection = [r, p, s];
-            let random = Math.floor(Math.random() * computerSelection.length);
-            let finalSolution = computerSelection[random];
-            console.log('The computer plays ' + computerSelection[random] + '!');
-            console.log(finalSolution);
-            }
-
-        function playerPlay() {
-
-            let playerSelection = [r];
-            console.log('The human plays ' + playerSelection + '!');
-            }
-
-            computerPlay();
-            playerPlay();
         
-        function playRound(computerPlay, playerPlay) {
-            
-            if (computerPlay === r && playerPlay === r) {
 
-                console.log('It is a tie!');
+        function computerPlay(computerSelection, random) {
+
+            computerSelection = [r, p, s];
+            random = Math.floor(Math.random() * computerSelection.length);
+            console.log('The computer plays ' + computerSelection[random] + '!');
+            return computerSelection[random];
+        }
+
+        function playerPlay(playerSelection) {
+
+            playerSelection = prompt("What do you want to play?");
+            
+
+            if (playerSelection.toLowerCase() == r) {
+
+            console.log('The human plays ' + playerSelection + '!');
+            return playerSelection;
 
             }
-            else {
-                console.log("Error");
+            
+
+            if (playerSelection.toLowerCase() == p ) {
+
+            console.log('The human plays ' + playerSelection + '!');
+            return playerSelection;
+
+            }
+            
+
+            if (playerSelection.toLowerCase() == s) {
+
+            console.log('The human plays ' + playerSelection + '!');
+            return playerSelection;
+
             }
         }
+
+        const computerRound = computerPlay();
+        const playerRound = playerPlay();  
+
+        function playRound() {
+
+            if (computerRound == playerRound) {
+
+                console.log("It's a tie!")
+                return;
+            }  
+            else {
+                    console.log("Error");
+                    return;
+            }
+        }  
+
         playRound();
 
-/*    
+
+                                                                                                                                                                                                                                                                                                                                                                                                                       
         
+        
+
+/*    
+        function playRound(computerSelection, playerSelection) {
+
+            if (player selection = computerSelection) {
+
+                console.log("It's a tie!")
+        }
+            else {
+                    console.log("Error");
+            }
+        }
+            
+
+        const playerSelection = playerPlay();
+        const computerSelection = computerPlay();
+        console.log(playRound(playerSelection, computerSelection));
 
         function playRound(playerPlay, computerPlay) {
             let r > s && p >
@@ -47,6 +91,8 @@
             let scissors > paper;
             return "You Lose! Paper beats Rock!"
         }
+                    console.log('The computer plays ' + options[random] + '!');
+            }
             const playerSelection = playerPlay();
             const computerSelection = computerPlay();
             console.log(playRound(playerSelection, computerSelection));
@@ -59,7 +105,7 @@
     return confirm('Did parents allow you?');
   }
 }
-
+            
 switch (expression) {
     case x:
         // execute case x code block
